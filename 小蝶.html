@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>情人节快乐</title>
+	  <script src="../jquery_notebook/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <style>
+	img {
+	width: 100%;
+	}
+	body {
+	min-height: 100vh;
+	background-image:url(../Vue/static/timg.gif);
+	color: #fff;
+	font-family: PingFangSC-Regular;
+	padding: 0;
+	margin: 0;
+	}
+	.heart{
+		width: 300px;
+		height: 300px;
+		margin: 10px auto;
+		position: absolute;
+		top: 0px;
+	/*			background-color: red;*/
+		lift: 20px;
+
+	}
+	.heart::before,.heart::after{
+		position: absolute;
+		display: block;
+		content:".";
+		width: 150px;
+		height: 250px;
+		background-color:#F8ADAE;
+		border-top-left-radius: 50% 75px;
+		border-top-right-radius: 50% 75px;
+		left: 41px;
+		top: 0px;
+		transform: rotate(-45deg);
+	}
+	.heart::after{
+		transform: rotate(45deg);
+		left: 112px;
+	}
+	  .avatar {
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		border: 2px solid #fff;
+	  }
+	  .shadow {
+		position: absolute;
+		left: 0;
+		z-index: -1;
+		filter: blur(50px);
+	  }
+	  .btn-group {
+		display: flex;
+		margin-top: 40px;
+		justify-content: space-between;
+		align-items: center;
+	  }
+	  .btn-group div {
+		flex: 1;
+		text-align: center;
+	  }
+	  .sure {
+		padding: 14px 0;
+		background: linear-gradient(
+		  180deg,
+		  rgba(255, 127, 87, 1) 0%,
+		  rgba(221, 40, 39, 1) 100%
+		);
+		border-top-left-radius: 20px;
+		border-bottom-left-radius: 20px;
+	  }
+	  .cancel {
+		padding: 14px 0;
+		background: #eee;
+		color: #333;
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+	  }
+		img{
+			width:100px;
+			height: 100px;
+		}
+	  marquee {
+		background: none;
+	  }
+	  @media screen and (min-width: 800px) {
+		.container {
+		  width: 350px;
+		  margin: 0 auto;
+		}
+	  }
+    </style>
+  </head>
+  <body>
+	<div class="heart"></div>
+	<div class="container">
+	  <div style="padding: 12px">
+		<div
+		  style="position: relative; display: flex; align-items: center; margin-bottom: 10px"
+		>
+		  <img src="../jquery_notebook/static/head.jpg" alt="" class="avatar" />
+		  <img src="./static/head.jpg" alt="" class="avatar shadow" />
+		  <h3 style="margin-left: 10px" id="name">王小蝶</h3>
+		</div>
+		<marquee scrolldelay="20" scrollamount="8" class="images">
+		  <img src="static/1.png" />
+		  <img src="static/2.png" />
+		  <img src="static/3.png" />
+		  <img src="static/4.png" />
+		  <img src="static/5.png" />
+		  <img src="static/6.png" />
+		  <img src="static/7.png" />
+		</marquee>
+		<audio
+		  src="http://att.chinauui.com/day_181211/20181211_8480d0323003455bd6de8CcQ3Eq28Mm9.mp3"
+		  autoplay
+		  loop
+		>
+		  您的浏览器不支持 audio 标签。
+		</audio>
+		<div class="btn-group">
+		  <div class="sure" onclick="alert('情人节快乐\\(^o^)/~')">
+			确定
+		  </div>
+		  <div class="cancel" onclick="alert('取消无效，请重新选择')">取消</div>
+		</div>
+	  </div>
+	</div>
+    <script>
+		$(function(){
+		setInterval(function(){
+			$(".heart").fadeToggle(3000)
+			
+		}, 500)
+	})
+    </script>
+  </body>
+</html>
