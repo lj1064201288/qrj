@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	  <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <title>情人节快乐</title>
-	  <script src="../jquery_notebook/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+	<script src="../jquery_notebook/jquery-3.4.1/jquery-3.4.1.min.js"></script>
     <style>
 	img {
 	width: 100%;
@@ -19,13 +24,13 @@
 	margin: 0;
 	}
 	.heart{
-		width: 300px;
-		height: 300px;
 		margin: 10px auto;
+/*
 		position: absolute;
 		top: 0px;
-	/*			background-color: red;*/
+				background-color: red;
 		lift: 20px;
+*/
 
 	}
 	.heart::before,.heart::after{
@@ -100,39 +105,40 @@
     </style>
   </head>
   <body>
-	<div class="heart"></div>
 	<div class="container">
-	  <div style="padding: 12px">
-		<div
-		  style="position: relative; display: flex; align-items: center; margin-bottom: 10px"
-		>
-		  <img src="../jquery_notebook/static/head.jpg" alt="" class="avatar" />
-		  <img src="./static/head.jpg" alt="" class="avatar shadow" />
-		  <h3 style="margin-left: 10px" id="name">王小蝶</h3>
+		<div class="row">
+			<div class="col-md-2">
+				<div class="heart"></div>
+			</div>
+			<div class="col-md-10">
+				<div style="padding: 12px">
+					<div style="position: relative; display: flex; align-items: center; margin-bottom: 10px">
+						<img src="../jquery_notebook/static/head.jpg" alt="" class="avatar" />
+						<img src="./static/head.jpg" alt="" class="avatar shadow" />
+						<h3 style="margin-left: 10px" id="name">王小蝶</h3>
+					</div>
+				</div>
+				<marquee scrolldelay="20" scrollamount="8" class="images">
+					<img src="static/1.png" />
+					<img src="static/2.png" />
+					<img src="static/3.png" />
+					<img src="static/4.png" />
+					<img src="static/5.png" />
+					<img src="static/6.png" />
+					<img src="static/7.png" />
+				</marquee>
+				<audio src="http://att.chinauui.com/day_181211/20181211_8480d0323003455bd6de8CcQ3Eq28Mm9.mp3" autoplayloop>
+				  您的浏览器不支持 audio 标签。
+				</audio>
+				<div class="btn-group">
+					<div class="sure" onclick="alert('情人节快乐\\(^o^)/~')">
+					确定
+					</div>
+					<div class="cancel" onclick="alert('取消无效，请重新选择')">取消</div>
+				</div>
+			</div>
 		</div>
-		<marquee scrolldelay="20" scrollamount="8" class="images">
-		  <img src="static/1.png" />
-		  <img src="static/2.png" />
-		  <img src="static/3.png" />
-		  <img src="static/4.png" />
-		  <img src="static/5.png" />
-		  <img src="static/6.png" />
-		  <img src="static/7.png" />
-		</marquee>
-		<audio
-		  src="http://att.chinauui.com/day_181211/20181211_8480d0323003455bd6de8CcQ3Eq28Mm9.mp3"
-		  autoplay
-		  loop
-		>
-		  您的浏览器不支持 audio 标签。
-		</audio>
-		<div class="btn-group">
-		  <div class="sure" onclick="alert('情人节快乐\\(^o^)/~')">
-			确定
-		  </div>
-		  <div class="cancel" onclick="alert('取消无效，请重新选择')">取消</div>
-		</div>
-	  </div>
+		
 	</div>
     <script>
 		$(function(){
